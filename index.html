@@ -1341,33 +1341,27 @@ function fromDisplayToNavd(displayFt){
 
 
 /* =========================================
-   1) Cohancey River at Greenwich
+   11) Absecon Channel at Atlantic City
 ========================================= */
 
-/* USGS observed (15-min IV). */
-const USGS_SITE="01413038";
-
-/* Water level ONLY (tide elevation NAVD88). */
+const USGS_SITE="01410600";
 const USGS_PARAM_PRIMARY = "72279";
 
-/* NOAA CO-OPS predictions */
-const COOPS_STATION="8537374";
+const COOPS_STATION="8534720";
 const COOPS_APP="cupajoe.live";
 const COOPS_DATUM="MLLW";
 const COOPS_INTERVAL="6";
 const COOPS_TZ="gmt";
 
-/* Tide-clock settings for crest-anchored highs (NOAA hilo predictions) */
-const NOAA_STATION_TIDECLOCK = "8537374";
+const NOAA_STATION_TIDECLOCK = "8534720";
 const CREST_WINDOW_HOURS = 2;
 const REQUIRE_WITHIN_HOURS = 1;
 
-/* Flood thresholds */
 const THRESH = {
-  MLLW:  { minorLow:7.20, moderateLow:8.20, majorLow:9.20 },
-  NAVD88:{ minorLow:3.93, moderateLow:4.93, majorLow:5.93 },
-  MSL:   { minorLow:4.05, moderateLow:5.05, majorLow:6.05 },
-  MHHW:  { minorLow:0.77, moderateLow:1.77, majorLow:2.77 }
+  MLLW:  { minorLow:5.70, moderateLow:6.70, majorLow:7.70 },
+  NAVD88:{ minorLow:3.26, moderateLow:4.26, majorLow:5.26 },
+  MSL:   { minorLow:3.60, moderateLow:4.60, majorLow:5.60 },
+  MHHW:  { minorLow:1.29, moderateLow:2.29, majorLow:3.29 }
 };
 
       const HOUR_MS = 60 * 60 * 1000;
